@@ -12,6 +12,8 @@ const app = express();
 // middlewares
 app.use(cors({
     origin: ['http://localhost:5173',
+        'https://milesahead-client.web.app',
+        'https://milesahead-client.firebase.app'
         ],
     credentials: true,
 }));
