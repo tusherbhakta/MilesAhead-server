@@ -92,7 +92,6 @@ async function run() {
                 query = { userEmail: email }
             }
             const myEvents = await eventsCollection.find(query).toArray();
-
             const events = await eventsCollection.find(query).skip(skip).limit(limit).toArray();
             const totalEvents = await eventsCollection.countDocuments();
             res.send({
@@ -120,7 +119,7 @@ async function run() {
             const randomRunningEvents = marathons.sort(() => Math.random() - Math.random()).slice(0, 3);
             res.send({
                 marathons,
-                randomRunningEvents
+                randomRunningEvents,
             });
         });
 
