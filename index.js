@@ -12,8 +12,7 @@ const app = express();
 // middlewares
 app.use(cors({
     origin: ['http://localhost:5173',
-        'https://sprint-space.firebaseapp.com',
-        'https://sprint-space.web.app'],
+        ],
     credentials: true,
 }));
 app.use(express.json());
@@ -42,7 +41,7 @@ const verifyToken = (req, res, next) => {
 };
 
 
-const PORT =  3008;
+const PORT =  process.env.PORT || 5000;
 
 
 // MongoDB Database Connection
@@ -281,5 +280,7 @@ run().catch(console.dir);
 
 // UqPicmzp4D60s6k6
 // tenet025
+
+// milesahead
 
 
