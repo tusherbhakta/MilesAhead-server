@@ -123,17 +123,6 @@ async function run() {
             });
         });
 
-        // app.get('/campaigns/:id/donations', async (req, res) => {
-        //     const id = req.params.id;
-        //     if (!ObjectId.isValid(id)) {
-        //         return res.status(400).send('Invalid campaign ID');
-        //     }
-        //     const donations = await donatationCollection.find({ campaignId: id }).toArray();
-        //     res.send(donations);
-        // });
-
-
-
         app.post('/events', verifyToken, async (req, res) => {
 
             const newEvent = req.body;
